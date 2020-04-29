@@ -33,6 +33,7 @@ declare -x LC_MESSAGES="C" LC_NUMERIC="C" LC_ALL=""
 #* Fail if running on unsupported OS
 case "$(uname -s)" in
 	Linux*)  system=Linux;;
+	FreeBSD*) system=Linux;; # seems to work - fixed it for you 
 	Darwin*) system=MacOS;;
 	CYGWIN*) system=Cygwin;;
 	MINGW*)  system=MinGw;;
